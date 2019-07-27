@@ -22,7 +22,7 @@ public class PagingController {
     @RequestMapping("/getBean")
     public ModelAndView getBean() {
         PageBean pageBean = new PageBean(1, 2, 5);
-        Movie one = movieDao.findOne();
+        Integer id= movieDao.findOne();
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject(pageBean);
         modelAndView.setViewName("index");

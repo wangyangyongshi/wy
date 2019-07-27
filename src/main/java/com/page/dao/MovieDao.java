@@ -12,5 +12,5 @@ import org.springframework.stereotype.Repository;
 @MapperScan
 public interface MovieDao {
 
-    Movie findOne();
+    Integer findOne();
 }

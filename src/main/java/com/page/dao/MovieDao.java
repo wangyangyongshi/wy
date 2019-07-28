@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * @author 王二小
  * @date 2019/3/28 0:11
  */
-@MapperScan
+@Repository
 public interface MovieDao {
 
     Integer findOne();

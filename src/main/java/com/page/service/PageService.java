@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
  * @author 王二小
  * @date 2019/3/27 23:15
  */
-@Service(value = "wangyang")
-public class PageService {
+@Service
+public interface PageService {
 
 
 }

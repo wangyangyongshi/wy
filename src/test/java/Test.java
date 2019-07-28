@@ -1,4 +1,6 @@
 import com.page.dao.MovieDao;
+import com.page.service.Strategy;
+import com.page.service.serviceImpl.NormalStrategy;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -7,6 +9,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author 王二小
@@ -29,6 +33,16 @@ public class Test {
         Object pageService = applicationContext.getBean("wangyang");
         System.out.println(pageService);
         System.out.println("====");
+    }
+
+
+    @org.junit.Test
+    public void testStrategy() {
+        Map map = new HashMap();
+        //将容器中的bean放到一个map中
+        Strategy strategy = applicationContext.getBean(NormalStrategy.class);
+        strategy.run();
+
     }
 
 
